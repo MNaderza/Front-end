@@ -1,0 +1,806 @@
+﻿
+body
+{
+    background-color:#000;
+}
+#container
+{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#header
+{
+    width:100%;
+    height:200px;
+    text-align:center;
+    color:#991616;
+    margin-left:auto;
+    margin-right:auto;
+}
+#menu
+{
+     width:100%;
+     text-align:center;
+     background-color:#991616;
+     height:50px;
+}
+#article
+{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+    color:white;
+    font-size:30px;
+    text-align:justify;
+    font-family: 'Oswald', sans-serif;
+}
+#footer
+{
+    width:100%;
+    height:70px;
+    margin-top:100px;
+    color:#fff;
+    text-align:center;
+    font-size:20px;
+}
+ol
+{
+    display:inline-block;
+    padding:0;
+    margin:0;
+    height:50px;
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;
+    color:#fff;
+    
+}
+ol > li:first-child
+{
+    border-left:3px dashed #383535;
+}
+ol > li
+{
+    border-right:3px dashed #383535;
+    float:left;
+    width:150px;
+    height:50px;
+    line-height:200%;
+   
+}
+ol>li>ul>li
+{
+    border-right:none;
+    border-bottom:3px dashed #383535;
+    list-style-type:none;
+    height:35px;
+    width:150px;
+    margin:0;
+    padding:0;
+    position:relative;
+    z-index:100;
+    background-color:#991616;
+    color:#fff;
+}
+li:hover
+{
+    color:#c5ae06;
+    background-color:#690d0d;
+    cursor:pointer;
+}
+ol> li >ul
+{
+    display:none;
+    padding:0;
+    margin:0;
+    line-height:150%;
+}
+ol> li:hover >ul
+{
+    display:block;
+    z-index:100;
+}
+#pgup
+{
+    width:100px;
+    height:100px;
+    position:fixed;
+    bottom:80px;
+    right:80px;
+    color:#fff;
+}
+#pgup:hover
+{
+    color:#c5ae06;
+    cursor:pointer;
+
+}
+a
+{
+    text-decoration: none;
+    color:currentColor;
+    display:block;
+}
+h1
+{
+    font-size:50px;
+    letter-spacing:4px;
+    font-family: 'Bungee Inline', cursive;
+}
+h2
+{
+    font-size:30px;
+    letter-spacing:3px;
+    color:#c5ae06;
+    font-family: 'Bungee Inline', cursive;
+}
+table
+{
+   border-collapse:collapse;
+
+}
+td
+{
+    border:5px solid #fff;
+    padding:10px;
+    text-align:center;
+}
+th
+{
+    border:5px solid #fff;
+    padding:20px;
+}
+form
+{
+    font-size:30px;
+    line-height:200%;
+}
+.number
+{
+    width:100px;
+    height:40px;
+    font-size:30px;
+    text-align:center;
+    border-radius:5px;
+}
+.submit1
+{
+    border:none;
+    background-color:#2f67db;
+    padding:10px;
+    font-size:20px;
+    border-radius:6px;
+    margin-left:60px;
+    margin-top:30px;
+    font-weight:700;
+    color:#fff;
+}
+.submit1:hover
+{
+     cursor:pointer;
+    border-color:#000;
+    font-weight:700;
+    background-color:#0d45b9;
+    color:#999;
+}
+@keyframes dumbbells
+{
+    0% {height:20%;}
+    100% {height:90%;}
+}
+.logo
+{
+    
+    animation-name:dumbbells;
+    animation-duration:3s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+    margin:0px 30px 0px 30px;
+}
+.headtext {
+    display: block;
+    float: left;
+    width: 75%;
+    margin: 0;
+    height: 100%;
+}
+.headpic
+{
+    height:150px;
+    margin:20px 0 0 0;
+    display:block;
+    width:10%;
+    float:left;
+}
+.image
+{
+    width:500px;
+    margin-left:300px;
+}
+.video
+{
+    width:560px;
+    height:315px;
+    margin-left:270px;
+    border:0px;
+}
+.gallery
+{
+    width:100%;
+}
+.gallydiv
+{
+    width:32%;
+    border:1px solid white;
+    float:left;
+    height:auto;
+}
+.description
+{
+    width:32%;
+    margin:0;
+    border:1px solid white;
+    float:left;
+    height:40px;
+    padding-top:10px;
+    float:left;
+    font-size:20px;
+    font-family:Arial;
+    text-align:center;
+}
+.gallypic 
+{
+    width: 100%;
+    height:350px;
+    margin:0;
+}
+.description:hover
+{
+    border-color:#808080;
+    cursor:pointer;
+    color:#808080;
+}
+.gallydiv:hover
+{
+    border-color:#808080;
+    cursor:pointer;
+}
+.submit
+{
+    border:none;
+    background-color:#2f67db;
+    padding:10px;
+    font-size:20px;
+    border-radius:6px;
+    margin-top:30px;
+    font-weight:700;
+    color:#fff;
+}
+.submit:hover
+{
+    cursor:pointer;
+    border-color:#000;
+    font-weight:700;
+    background-color:#0d45b9;
+    color:#999;
+}
+.mail
+{
+    width:100%;
+    text-align:center;
+}
+.mailname
+{
+    width:300px;
+    height:30px;
+    font-size:26px;
+    margin-top:20px;
+    border-radius:4px;
+}
+.mailtext
+{
+    width:400px;
+    height:200px;
+    margin-top:30px;
+    font-size:20px;
+    border-radius:4px;
+}
+.sticky
+{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+}
+#opac
+{
+    width:100%;
+    height:100%;
+    z-index:90;
+    opacity:0.7;
+    background-color:#808080;
+    position:fixed;
+    top:0;
+}
+.photo
+{
+     
+    z-index:91;
+   width:60%;
+     height:70%;
+    position:fixed;
+    left:20%;
+     top:15%;
+     text-align:center;
+}
+.photo>img
+{
+    max-height:100%;
+    max-width:100%;
+    margin-top:auto;
+    margin-bottom:auto;
+    animation:fadeIn;
+    animation-duration:1s;
+}
+#esc
+{
+    font-size:40px;
+    z-index:91;
+    margin:0;
+    position:fixed;
+    left:81%;  top:8%;
+}
+#right
+{
+    font-size:40px;
+    z-index:91;
+    margin:0;
+    position:fixed;
+    top:45%;
+    left:81%;
+    font-size:60px;
+}
+#left
+{
+    font-size:40px;
+    z-index:91;
+    margin:0;
+    position:fixed;
+    top:45%;
+    right:81%;
+    font-size:60px;
+}
+@keyframes fadeIn
+{
+    0% {opacity:0.5}
+    100% {opacity:1}
+}
+#tips
+{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:30px;
+    border:5px dotted #383535;
+    border-radius:10px;
+}
+#tips:hover
+{
+    background-color:#383535;
+    cursor:pointer;
+}
+
+.fakewindowcontain .ui-widget-overlay 
+{
+    position: absolute;
+}
+@media screen and (max-width:400px)
+{
+    body
+    {
+        margin:0;
+    }
+    #left,#right
+    {
+        top:25%;
+        font-size:30px;
+    }
+    #container
+    {
+        width:100%;
+        margin-left:0;
+    }
+    ol>li
+    {
+        width:23.5%;
+        line-height:400%;
+    }
+    ol:first-child
+    {
+        margin-left:5px;
+    }
+    ol
+    {
+        width:100%;
+        font-size:10px;
+    }
+    ol>li:hover>ul
+    {
+        display:none;
+    }
+    h1{
+        font-size:12px;
+        margin-top:10px;
+    }
+    #header
+    {
+        height:100px;
+    }
+    .headtext{
+        width:50%;
+        margin-left:12.5%;
+        text-align:center;
+    }
+    .headpic
+    {
+        width:10%;
+        margin-top:30px;
+        height:70px;
+    }
+    @keyframes dumbbells
+    {
+        0% {height:10%}
+        100% {height:40%}
+    }
+    #article
+    {
+        font-size:16px;
+    }
+    h2
+    {
+        font-size:22px;
+    }
+    .image
+    {
+        margin:0;
+        width:100%;
+    }
+    .video
+    {
+        margin:0;
+        width:100%;
+    }
+    table
+    {
+        font-size:12px;
+    }
+    th
+    {
+        padding:2px;
+        border:1px solid #fff;
+    }
+    td
+    {
+        border:1px solid #fff; 
+    }
+    #footer{
+        font-size:10px;
+    }
+    #pgup
+    {
+        display:none;
+    }
+    .mailname
+    {
+        width:90%;
+    }
+    .mailtext
+    {
+        width:90%;
+    }
+    form
+    {
+        font-size:14px;
+    }
+    .gallydiv
+    {
+        height:100px;
+    }
+    .gallypic
+    {
+        height:100px;
+    }
+    .description
+    {
+        font-size:10px;
+    }
+    .submit1
+    {
+        margin-left:15px;
+    }
+}
+@media screen and (max-width:700px) and (min-width:401px)
+{
+    body
+    {
+        margin:0;
+        padding:0;
+    }
+    #left,#right
+    {
+        top:30%;
+        font-size:40px;
+    }
+    ol>li
+    {
+        width:23%;
+        line-height:300%;
+    }
+    ol
+    {
+        width:100%;
+        font-size:14px;
+        margin-left:5px;
+    }
+    ol>li:hover>ul
+    {
+        display:none;
+    }
+    h1{
+        font-size:16px;
+    }
+    #header
+    {
+        height:100px;
+    }
+    .headtext{
+        width:50%;
+        margin-left:12.5%;
+        text-align:center;
+    }
+    .headpic
+    {
+        width:10%;
+        margin-top:30px;
+        height:70px;
+    }
+    @keyframes dumbbells
+    {
+        0% {height:20%}
+        100% {height:70%}
+    }
+    #article
+    {
+        font-size:16px;
+    }
+    h2
+    {
+        font-size:22px;
+    }
+    .image
+    {
+        margin:0;
+        width:100%;
+    }
+    .video
+    {
+        margin:0;
+        width:100%;
+    }
+    table
+    {
+        font-size:16px;
+    }
+    th
+    {
+        padding:2px;
+        border:1px solid #fff;
+    }
+    td
+    {
+        border:1px solid #fff; 
+    }
+    #footer{
+        font-size:12px;
+    }
+    #pgup
+    {
+        display:none;
+    }
+    .mailname
+    {
+        width:100%;
+    }
+    .mailtext
+    {
+        width:100%;
+    }
+    form
+    {
+        font-size:16px;
+    }
+    .gallydiv
+    {
+        height:150px;
+    }
+    .gallypic
+    {
+        height:150px;
+    }
+    .description
+    {
+        font-size:12px;
+    }
+    .submit1
+    {
+        margin-left:50px;
+    }
+}
+@media screen and (min-width:701px) and (max-width:1000px)
+{
+    body
+    {
+        margin:0;
+    }
+   #left,#right
+    {
+        top:40%;
+    }
+    ol
+    {
+        font-size:20px;
+    }
+    ol>li
+    {
+        width:120px;
+        line-height:250%;
+    }
+    ol>li:hover>ul
+    {
+        display:none;
+    }
+    h1{
+        font-size:34px;
+        line-height:130%;
+    }
+    #header
+    {
+        height:150px;
+    }
+    .headtext{
+        width:50%;
+        margin-left:12.5%;
+        text-align:center;
+    }
+    .headpic
+    {
+        width:10%;
+        margin-top:30px;
+        height:120px;
+    }
+    @keyframes dumbbells
+    {
+        0% {height:20%}
+        100% {height:70%}
+    }
+    #article
+    {
+        font-size:22px;
+    }
+    h2
+    {
+        font-size:28px;
+    }
+    .image
+    {
+        margin:12.5%;
+        width:75%;
+    }
+    .video
+    {
+        margin-left:12.5%;
+        width:75%;
+    }
+    table
+    {
+        font-size:24px;
+    }
+    th
+    {
+        padding:10px;
+        border:1px solid #fff;
+        text-align:center;
+    }
+    td
+    {
+        border:1px solid #fff; 
+    }
+    #footer{
+        font-size:12px;
+    }
+    #pgup
+    {
+        display:none;
+    }
+    .mailname
+    {
+        width:100%;
+    }
+    .mailtext
+    {
+        width:100%;
+    }
+    form
+    {
+        font-size:18px;
+    }
+    .description
+    {
+        font-size:16px;
+    }
+    .submit1
+    {
+        margin-left:120px;
+    }
+}
+@media screen and (min-width:1001px) and (max-width:1250px)
+{
+    ol>li
+    {
+        width:120px;
+        line-height:230%;
+    }
+    ol
+    {
+        font-size:20px;
+    }
+    ol>li>ul>li
+    {
+        width:120px;
+        height:30px;
+    }
+   
+    h1{
+        font-size:40px;
+        line-height:130%;
+    }
+    #header
+    {
+        height:150px;
+    }
+    .headtext{
+        width:60%;
+        margin-left:8%;
+        text-align:center;
+    }
+    .headpic
+    {
+        width:10%;
+        margin-top:30px;
+        height:120px;
+    }
+    @keyframes dumbbells
+    {
+        0% {height:20%}
+        100% {height:90%}
+    }
+    #pgup
+    {
+        width:100px;
+        height:100px;
+        bottom:20px;
+        right:20px;
+    }
+    .image
+    {
+        margin-left:25%;
+        width:50%;
+    }
+    .video
+    {
+        margin-left:25%;
+        width:50%;
+    }
+}

@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moi idole-Mikołaj Naderza</title>
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Oswald" rel="stylesheet">
+    <script src="JS.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/flaticon.css">
+
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <figure class="headpic">
+                <img src="svg/dumbbell.svg" class="logo" alt="logo" />
+            </figure>
+            <figure class="headtext">
+                <h1>KULTURYSTYKA-MOJA PASJA</h1>
+            </figure>
+            <figure class="headpic">
+                <img src="svg/dumbbell.svg" class="logo" alt="logo" />
+            </figure>
+        </div>
+        <div id="menu">
+            <ol>
+                <li><a href="index.html">GŁÓWNA</a></li>
+                <li>
+                    <a href="treningi.html">TRENINGI</a>
+                    <ul>
+                        <li><a href="treningi.html#nogi">NOGI</a></li>
+                        <li><a href="treningi.html#klata">KLATKA</a></li>
+                        <li><a href="treningi.html#plecy">PLECY</a></li>
+                        <li><a href="treningi.html#barki">BARKI</a></li>
+                        <li><a href="treningi.html#dieta">DIETA</a></li>
+                    </ul>
+                </li>
+                <li><a href="idole.html">IDOLE</a></li>
+                <li><a href="kontakt.html">PROJEKT</a></li>
+            </ol>
+
+        </div>
+        <div id="article">
+                <br />
+                W kulturystyce bardziej niż w jakimkolwiek innym sporcie ważne jest posiadanie swoich idoli, wzorców do naśladowania. Jedni z nas inspirują nas swoim wyglądem, inni sposobem treningu, jeszcze inni przekonują nas do siebie swoją kontaktowością. Poniżej prezentuje kilka osób ze świata kulturystycznego, którym zdecydowanie warto się przyjrzeć.<br /><br />
+                <div class="gallery">
+                    <div class="gallydiv">
+                         <img src="images/img1.jpg" alt="Simeon Panda" onclick="gallery(1)" class="gallypic" />
+                     </div>
+                    <div class="gallydiv">
+                            <img src="images/img2.jpg" alt="Lazar Angelow" onclick="gallery(2)" class="gallypic" />
+                    </div>
+                    <div class="gallydiv">
+                            <img src="images/img3.jpg" alt="Ryan Terry" onclick="gallery(3)" class="gallypic" />
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/simeonpanda/" target="_blank">Simeon Panda</a>
+                    </div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/lazar_angelov_official/" target="_blank">Lazar Angelov</a>
+                    </div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/ryanjterry/" target="_blank">Ryan Terry</a>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="gallydiv">
+                            <img src="images/img4.jpg" alt="Lazar Novovic" onclick="gallery(4)" class="gallypic" />
+                    </div>
+                    <div class="gallydiv">
+                            <img src="images/img5.jpg" alt="Arnold Schwarzenegger" onclick="gallery(5)" class="gallypic" />
+                    </div>
+          
+                    </div> 
+                    <div class="gallydiv">
+                            <img src="images/img6.jpg" alt="Michał Karmowski" onclick="gallery(6)" class="gallypic" />
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/lazarnovovic/" target="_blank">Lazar Novovic</a>
+                    </div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/schwarzenegger/" target="_blank">Arnold Schwarzenegger</a>
+                    </div>
+                    <div class="description">
+                        <a href="https://www.instagram.com/michalkarmowski/" target="_blank">Michał Karmowski</a>
+                    </div>
+                </div>
+            </div>
+       
+        <div id="footer">Made by Mikołaj Naderza &copy; Fonts by googlefonts <br /> Icon made by Freepik from www.flaticon.com</div>
+    </div>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            var Top = $('#menu').offset().top;
+            var Stick = function ()
+            {
+                var Scroll = $(window).scrollTop();
+                if (Scroll > Top)
+                {
+                    $('#menu').addClass('sticky');
+                }
+                else
+                {
+                    $('#menu').removeClass('sticky');
+                }
+            };
+            $(window).scroll(function ()
+            {
+                Stick();
+            });
+        });
+    </script>
+
+</body>
+</html>

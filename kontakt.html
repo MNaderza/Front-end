@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Kontakt-Mikołaj Naderza</title>
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Oswald" rel="stylesheet">
+    <script src="jquery-3.1.1.min.js"></script>
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            var Top = $('#menu').offset().top;
+            var Stick = function ()
+            {
+                var Scroll = $(window).scrollTop();
+                if (Scroll > Top)
+                {
+                    $('#menu').addClass('sticky');
+                }
+                else
+                {
+                    $('#menu').removeClass('sticky');
+                }
+            };
+            $(window).scroll(function ()
+            {
+                Stick();
+            });
+        });
+
+        
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <figure class="headpic">
+                <img src="svg/dumbbell.svg" class="logo" alt="logo"/>
+            </figure>
+            <figure class="headtext">
+                <h1>KULTURYSTYKA-MOJA PASJA</h1>
+            </figure>
+            <figure class="headpic">
+                <img src="svg/dumbbell.svg" class="logo" alt="logo"/>
+            </figure>
+        </div>
+        <div id="menu">
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <a href="treningi.html">TRENINGI</a>
+                    <ul>
+                        <li><a href="treningi.html#nogi">NOGI</a></li>
+                        <li><a href="treningi.html#klata">KLATKA</a></li>
+                        <li><a href="treningi.html#plecy">PLECY</a></li>
+                        <li><a href="treningi.html#barki">BARKI</a></li>
+                        <li><a href="treningi.html#dieta">DIETA</a></li>
+                    </ul>
+                </li>
+                <li><a href="idole.html">IDOLE</a></li>
+                <li><a href="kontakt.html">PROJEKT</a></li>
+            </ol>
+
+        </div>
+        <div id="article">
+                <h2>ANKIETA</h2>
+                W ramach pracy mojej pracy magisterskiej jestem zobowiązany przeprowadzić sondę społeczną. Jeśli spodobała ci się moja strona 
+                pomóż mi w tym uzupełniając poniższą ankietę. Zajmie ci to mniej niż minutę. Pięcsetna osoba zostanie nagrodzona zestawem suplementów. Dzięki i udanych treningów!<br/><br/>
+            <form>
+                Podaj swoją datę urodzenia:<br/>
+                <div id="datepicker"></div><br/>
+                Podaj swoją płeć:<br/>
+                <input type="checkbox" class="sex" name="plec" value="Mężczyzna" />Mężczyzna<br/>
+                <input type="checkbox" class="sex" name="plec" value="Kobieta" />Kobieta<br /><br/>
+                Ile razy w tygodniu podejmujesz wysoki wysiłek fizyczny?<br/>
+                <input id="spinner"/><br/><br/>
+                Opisz krótko twój stosunek do zdrowego stylu życia. Jaką wagę przykładasz do składu swojego jedznia? Czy określasz swój styl życia jako zdrowy?<br/>
+                <textarea name="opis" id="opis" class="mailtext" maxlength="200" placeholder="Opisz swój styl życia"></textarea><br/><br />
+                <input type="reset" class="submit1" /><input type="submit" id="dialogopen" onclick="tresc()" class="submit1" />               
+
+            </form>
+            <div id="dialog" title="Podsumowanie formularza"></div>
+        </div>
+        <div id="footer">Made by Mikołaj Naderza &copy; Fonts by googlefonts <br /> Icon made by Freepik from www.flaticon.com</div>
+    </div>
+<script>
+    if (localStorage.data) {
+        localStorage.data = localStorage.data;
+    } else {
+        localStorage.data = '';
+    }
+
+    $("#dialog").dialog({
+    autoOpen: false,
+    width: 400,
+    buttons: [
+		    {
+		        text: "Ok",
+		        click: function () {
+		             $(this).dialog("close");
+		             }
+		    },
+		    {
+		        text: "Cancel",
+		        click: function () {
+		            $(this).dialog("close");
+		        }
+		    }
+             ]
+    });
+    $("#datepicker").datepicker({
+            onSelect: function (dateText, inst) {
+                var dateAsString = dateText;
+                var dateAsObject = $(this).datepicker('getDate');
+            },
+            dateFormat: 'dd-mm-yy',
+            defaultDate: '01-01-1995'
+            });
+
+    $("#spinner").spinner({
+            min: 0,
+            max: 7,
+            step: 1,
+            change: function (event, ui) {
+                $(this).attr("value", $(this).val());
+            }
+            })
+    function tresc() {
+            var date = $("#datepicker").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
+            var spin = $('#spinner').spinner("value");
+            var sex = $('.sex:checked').val();
+            var text = $('.mailtext').val();
+            var check = date+spin+sex+text;
+            var bool = 0;
+            if (localStorage.data == check)
+                 document.getElementById('dialog').innerHTML = "Wypełniałeś już ten formularz, dziękuje!";
+            else {
+                localStorage.data = check;
+                document.getElementById('dialog').innerHTML = sex + "<br/>Urodzony: " + date + "<br/>Uprawiasz sport " + spin + " razy w tygodniu <br/> Komentarz: " + text + "<br/>";
+                 }
+            }
+
+    $("#dialogopen").click(function (event) {
+            $("#dialog").dialog("open");
+            event.preventDefault();
+        });
+ </script>
+
+</body>
+</html>

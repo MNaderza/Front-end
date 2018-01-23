@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moje hobby-Mikołaj Naderza</title>
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Oswald" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <figure class="headpic">
+                 <img src="svg/dumbbell.svg" class="logo" alt="logo" />
+             </figure>
+             <figure class="headtext">
+                <h1>KULTURYSTYKA- MOJA PASJA</h1>
+             </figure>
+             <figure class="headpic">
+                 <img src="svg/dumbbell.svg" class="logo" alt="logo"/>
+            </figure>
+        </div>
+        <div id="menu">
+            <ol>
+                <li><a href="index.html">GŁÓWNA</a></li>
+                <li>
+                    <a href="treningi.html">TRENINGI</a>
+                    <ul>
+                        <li><a href="treningi.html#nogi">NOGI</a></li>
+                        <li><a href="treningi.html#klata">KLATKA</a></li>
+                        <li><a href="treningi.html#plecy">PLECY</a></li>
+                        <li><a href="treningi.html#barki">BARKI</a></li>
+                        <li><a href="treningi.html#dieta">DIETA</a></li>
+                    </ul>
+                </li>
+                <li><a href="idole.html">IDOLE</a></li>
+                <li><a href="kontakt.html">PROJEKT</a></li>
+            </ol>
+
+        </div>
+        <div id="article">
+            <br />
+            Witaj. Nazywam się Mikołaj Naderza, jestem studentem informatyki oraz pasjnonatem kulturystki. Jeśli trafiłeś na tą stronę to zapewne szukasz porad dotyczących treningu, lub zastanawiasz się od czego zacząć. Na tej stronie spróbuje przekonać cię że warto, oraz przekażę ci wiedzę, którą potrzebujesz.
+            <h2>DLACZEGO WARTO?</h2>
+            Siłownia to nie tylko sposób na poprawienie swojego wyglądu. Jest ona niezwykle pozytywnym bodźcem dla naszego zdrowia, pomaga utrzymać organizm w wysokiej formie fizycznejm, a przede wszystkim kształtuje silną wolę. Dzięki siłowni nie tylko twoje ciało ale i psychika będą ze stali!
+            <h2>Kontakt</h2>
+            Jeśli po lekturze mojej strony masz jakieś pytania, skorzystaj z poniższego formularza kontaktowego
+            <br/><br/>
+            <div class="mail">
+                <form action="mailto:mi.na@op.pl" method="post" enctype="text/plain">
+                
+                        <input name="imię" placeholder="Imię" class="mailname"/><br />
+                        <input name="adres" placeholder="Adres email" class="mailname"/><br />
+                        <textarea name="wiadomośc" placeholder="Treść wiadomości" class="mailtext"></textarea><br />
+                        <input type="submit" value="WYŚLIJ" class="submit"/>
+                </form>
+            </div>
+            </div>
+                <div id="footer">
+                    Made by Mikołaj Naderza &copy; email: mi.na@op.pl <br/> Fonts by googlefonts <br /> Icon made by Freepik from www.flaticon.com
+
+                </div>
+        </div>
+    <script src="jquery-3.1.1.min.js"></script>
+        <script>
+        $(document).ready(function ()
+        {
+            var Top = $('#menu').offset().top;
+            var Stick = function ()
+            {
+                var Scroll = $(window).scrollTop();
+                if (Scroll > Top)
+                {
+                    $('#menu').addClass('sticky');
+                }
+                else
+                {
+                    $('#menu').removeClass('sticky');
+                }
+            };
+            $(window).scroll(function ()
+            {
+                Stick();
+            });
+        });
+     </script>
+
+    
+</body>
+</html>
